@@ -1,7 +1,7 @@
 /*página principal e elementos em comum*/
 
 html, body{
-    height: 100%;
+    height: 100%; /*garante que o conteúdo ocupará toda a página*/
 }
 
 body { /*estilização da fonte e cor de fundo utilizada pela página*/
@@ -31,11 +31,11 @@ nav li {
 }
 
 nav a {/*estilização dos itens do menu*/
-	text-transform: uppercase;
-	color: #000000;
-	font-weight: bold;
-	font-size: 22px;
-	text-decoration: none;
+	text-transform: uppercase; /*letras maiúsculas*/
+	color: #000000; /*cor da fonte*/
+	font-weight: bold; /*negrito*/
+	font-size: 22px; /*tamanho da fonte*/
+	text-decoration: none; /*sem decorações adicionais como sublinhado*/
 }
 
 nav a:hover {/*estilização para quando o mouse passa sobre os menus*/
@@ -97,38 +97,38 @@ footer {/*estilização do rodapé*/
 	margin: 20px 0 0;
 }
 
-/*pagina formação e projetos*/
+/*estilos para a pagina formação e projetos*/
 
-.habilidades{
+.habilidades{ /*define margem para todoo conteúdo englobado pela seção habilidades*/
     margin: 50px;
 }
-.secundario {
+.secundario {/*define padding para cada uma das seções secundárias*/
     padding: 20px;
 }
 
-.secundario h2 {
+.secundario h2 {/*estiliza os títulos h2 das seções secundárias*/
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.lista {
+.lista {/*define estilo da lista das formaçẽos*/
     list-style: none;
     padding: 0;
 }
 
-.formacao-item {
+.formacao-item {/*define margem para cada item da lista*/
     margin-bottom: 20px;
 }
 
-.formacao-data {
+.formacao-data {/*deixa data do curso em negrito*/
     font-weight: bold;
 }
 
-.formacao-titulo {
+.titulo {/*estiliza nome dos cursos*/
     font-weight: bold;
 }
 
-.formacao-local {
+.descricao {/*estiliza a descrição de cada item da formação*/
     margin-top: 5px;
 }
 
@@ -139,6 +139,7 @@ form {
 	margin: 40px 0;
 }
 
+/*estiliza os inputs utilizados no form, destaque para display block para cada um ocupar sua própria linha */
 .input-padrao {
 	display: block;
 	margin: 0 0 20px;
@@ -146,69 +147,82 @@ form {
 	width: 90%;
 }
 
+/*estiliza a seção contato que engloba título "Contato" e o formulário em si*/
 .contato {
 	padding: 3em 0;
 	width: 800px;
 	margin: 0 auto;
 }
 
+/*estiliza o botão enviar*/
 .botao{
     padding: 10px 25px;
     margin: 0 auto;
 }
 
+/*estilização para permitir responsividade e visualização apropriada em celulares*/
+/*define alteração assim que a tela for menor que 1200px*/
 @media screen and (max-width: 1200px) {
     body{
         margin: 0;
         background: linear-gradient(#BBBBBB, #fefefe);
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; 
+        /*as últimas propriedades evitam que navegador do celular recomeçe o gradiente, criando um único gradiente do começo ao fim*/
     }
 	.principal{
+        /*define a largura do conteúdo principal em 80%, notação em px não é mais apropriada nesse caso*/
 		width: 80%;
 	}
 
+    /*Centraliza título*/
 	h1 {
 		text-align: center;
 	}
 
+    /*aleração para um menu centralizado para celulares*/
 	nav {
         width: 80%;
         display: flex; /* utilizado flexbox para o menu */
-        justify-content: flex-center; /* alinha itens a direita horizontalmente */
+        justify-content: flex-center; /* centraliza menu */
         align-items: center; /* centraliza os itens verticalmente */
         padding: 10px; 
         margin-right: 20px;
     }
 
-	.principal{
-        flex-direction: column;
-        overflow: auto;
-    }
-    img { 
-        width: auto;
-        margin: 20px 0;
-    }
-
-    .sobre{
-        margin: 20px;
-    }
-    
-    .contato {
-        padding: 3em 0;
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-
-    nav a {/*estilização dos itens do menu*/
+    nav a {/*estilização dos itens do menu, diminuição da fonte*/
         text-transform: uppercase;
         color: #000000;
         font-weight: bold;
         font-size: 12px;
         text-decoration: none;
     }
-    footer {/*estilização do rodapé*/
+
+    /*alteração do conteúdo para coluna, o texto aparece abaixo da foto*/
+	.principal{
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    /*largura automática para se adaptar a nova tela*/
+    img { 
+        width: auto;
+        margin: 20px 0;
+    }
+
+    /*nova margem para a seção sobre, para não ficar grudado nas laterais do celular*/
+    .sobre{
+        margin: 20px;
+    }
+    
+    /*adaptação da largura da seção contato para medias menores*/
+    .contato {
+        padding: 3em 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    footer {/*estilização do rodapé, texo sobre se expandirá para além do fim da tela, nesse caso um rodapé relativo é melhor que o fixo*/
         position: relative;
         bottom: 0;
         width: 100%;
@@ -218,11 +232,13 @@ form {
         text-align: center;
       }
 
+    /*mantém rodaé fixo apenas para página projetos*/
     #rodape-projetos{
         position: absolute;
         bottom: 0;
     }
 
+    /*estilização da margem da página de formação para telas menores/celulares*/
     .habilidades{
         margin: 5%;
     }

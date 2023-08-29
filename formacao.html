@@ -11,8 +11,8 @@
     <title>Bleider Santos</title>
 </head>
 <body>
+    <!--cabeçalho, mesmo utilizado em todas as páginas-->
     <header>
-        <div class = "caixa">
             <nav>
                 <ul>
                     <li><a href="index.html">SOBRE</a></li>
@@ -21,61 +21,63 @@
                     <li><a href="contato.html">CONTATO</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
 
+    <!--seção habilidades qeu abrangerá todos os conteúdos da página formação-->
     <section class="habilidades">
+        <!--seção secundária, utilizada para formação acadêmica-->
+        <!--foram utilizadas divs para cada item com nomes significativos para permitir estilização-->
         <section class="secundario">
             <h2>Formação Acadêmica</h2>
             <ul class="lista">
                 <li>
                     <div class="formacao-item">
                         <div class="formacao-data">12/2022 - </div>
-                        <div class="formacao-titulo">Análise e desenvolvimento de sistemas</div>
-                        <div class="formacao-local">Centro Universitário Internacional Uninter</div>
+                        <div class="titulo">Análise e Desenvolvimento de Sistemas</div>
+                        <div class="descricao">Centro Universitário Internacional Uninter</div>
                     </div>
                 </li>
                 <li>
                     <div class="formacao-item">
                         <div class="formacao-data">2011-2015</div>
-                        <div class="formacao-titulo">Bachareado em Física</div>
-                        <div class="formacao-local">Universidade de São Paulo - USP</div>
+                        <div class="titulo">Bacharelado em Física</div>
+                        <div class="descricao">Universidade de São Paulo - USP</div>
                     </div>
                 </li>
             </ul>
         </section>  
-    
+
+         <!--seção secundária, utilizada para conhecimentos técnicos-->
         <section class="secundario">
-            <h2>Conehcimentos Técnicos</h2>
+            <h2>Conhecimentos Técnicos</h2>
             <ul class="lista">
                 <li>
                     <div class="formacao-item">
-                        <div class="formacao-titulo">Hard Skills</div>
-                        <div class="formacao-local">Java, Python, SQL, Springboot, Rest API, HTML, CSS, Javascript, Git, Linux</div>
+                        <div class="titulo">Hard Skills</div>
+                        <div class="descricao">Java, Python, SQL, Springboot, Rest API, HTML, CSS, Javascript, Git, Linux.</div>
                     </div>
                 </li>
                 <li>
                     <div class="formacao-item">
-                        <div class="formacao-titulo">Soft Skills</div>
-                        <div class="formacao-local">Pensamento analítico, resolução de problemas, colaboração, aprendizado contínuo, gestão de tempo</div>
+                        <div class="titulo">Soft Skills</div>
+                        <div class="descricao">Pensamento analítico, resolução de problemas, colaboração, aprendizado contínuo, gestão de tempo.</div>
                     </div>
                 </li>
             </ul>
         </section> 
-    
+        
+        <!--seção secundária, utilizada para idiomas-->
         <section class="secundario">
             <h2>Idiomas</h2>
             <ul class="lista">
                 <li>
                     <div class="formacao-item">
-                        <div class="formacao-titulo"></div>
-                        <div class="formacao-local">Português nativo</div>
+                        <div class="descricao">Português nativo</div>
                     </div>
                 </li>
                 <li>
                     <div class="formacao-item">
-                        <div class="formacao-titulo"></div>
-                        <div class="formacao-local">Inglês fluente</div>
+                        <div class="descricao">Inglês fluente</div>
                     </div>
                 </li>
             </ul>
@@ -83,9 +85,10 @@
 
     </section>
 
+    <!--rodabé, ícones github e email assim como copyright-->
     <footer>
-        <a href="https://github.com/MobiusRug"><img src="github.png" alt="" id = "github"></a>
-        <img src="email.png" alt="">
+        <a href="https://github.com/MobiusRug"><img src="github.png" alt="ícone github" id = "github"></a>
+        <img src="email.png" alt="ícone email">
         <br>
         <p class="copyright"> Bleider Santos &copy;2023</p>
     </footer>
