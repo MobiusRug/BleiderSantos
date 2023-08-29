@@ -1,0 +1,231 @@
+/*página principal e elementos em comum*/
+
+html, body{
+    height: 100%;
+}
+
+body { /*estilização da fonte e cor de fundo utilizada pela página*/
+    margin: 0;
+	font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#BBBBBB, #fefefe);
+}
+
+header {/*estilização do cabeçalho*/
+	background: #BBBBBB;
+	padding: 40px 0;
+}
+
+
+nav {
+    display: flex; /* utilizado flexbox para o menu */
+    justify-content: flex-end; /* alinha itens a direita horizontalmente */
+    align-items: center; /* centraliza os itens verticalmente */
+    padding: 10px; 
+    margin-right: 20px;
+    
+}
+
+nav li {
+	display: inline; /*inline para que o menu seja horizontal */
+	margin: 0 0 0 15px;
+}
+
+nav a {/*estilização dos itens do menu*/
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {/*estilização para quando o mouse passa sobre os menus*/
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+
+.principal{/*estilização do conteúdo principal da página sobre - foto + texto*/
+    width: 1200px;
+    margin: 0 auto; /*centraliza div*/
+    display: flex; /* utilizado flexbox para alinhamento horizontal */
+    justify-content: center; /* justififca elementos no centro */
+    align-items: center; /* centraliza os itens verticalmente */
+    padding: 10px;
+}
+
+.principal p { /*estilização dos parágrafos do conteúdo principal*/
+	margin: 0 0 1em; 
+}
+
+.titulo-principal { /*estilização do título principal das páginas*/
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+
+img{ /*estilização da imagem utilizada - possível criar classe específica caso seja utilizada mais imagens no futuro*/
+    margin: 50px;
+}
+
+footer {/*estilização do rodapé*/
+    position: fixed; /*fixa rodapé no final da página e estiliza*/
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer img{/*estilização dos ícones do rodapé*/
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  #github{ /*alteração específica do tamanho do ícone github, devido a não ter ficado proporcional com 40px*/
+    width: 37px;
+    height: 37px;
+  }
+  
+  .copyright {/*estilização do texto de copyright*/
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/*pagina formação e projetos*/
+
+.habilidades{
+    margin: 50px;
+}
+.secundario {
+    padding: 20px;
+}
+
+.secundario h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.formacao-item {
+    margin-bottom: 20px;
+}
+
+.formacao-data {
+    font-weight: bold;
+}
+
+.formacao-titulo {
+    font-weight: bold;
+}
+
+.formacao-local {
+    margin-top: 5px;
+}
+
+
+/*página contato*/
+
+form {
+	margin: 40px 0;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 90%;
+}
+
+.contato {
+	padding: 3em 0;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.botao{
+    padding: 10px 25px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    body{
+        margin: 0;
+        background: linear-gradient(#BBBBBB, #fefefe);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+	.principal{
+		width: 80%;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+        width: 80%;
+        display: flex; /* utilizado flexbox para o menu */
+        justify-content: flex-center; /* alinha itens a direita horizontalmente */
+        align-items: center; /* centraliza os itens verticalmente */
+        padding: 10px; 
+        margin-right: 20px;
+    }
+
+	.principal{
+        flex-direction: column;
+        overflow: auto;
+    }
+    img { 
+        width: auto;
+        margin: 20px 0;
+    }
+
+    .sobre{
+        margin: 20px;
+    }
+    
+    .contato {
+        padding: 3em 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+
+    nav a {/*estilização dos itens do menu*/
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: bold;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    footer {/*estilização do rodapé*/
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 6px;
+        text-align: center;
+      }
+
+    #rodape-projetos{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .habilidades{
+        margin: 5%;
+    }
+    
+}
+
